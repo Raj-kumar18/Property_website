@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% block title %}{% endblock title %}
+{% block start %}
+
+{% for x in property %}
+
+<div class="property_detail_container">
+    <h1 class="propertyHeading">{{x.title}}</h1>
+
+    <div class="third">{{x.created_at}}</div>
+    <div class="images">
+        <img src="{{x.photo.url}}" alt="">
+    </div>
+    <div class="shadow">
+    <div class="detail">
+        <p class="price">₹{{x.price}}</p>
+        {% if x.bedrooms == none %}
+
+        {% elif x.bathrooms == none %}
+
+        {% else %}
+        <p>Bedrooms:{{x.bedrooms}}</p>
+        <p>Bathrooms:{{x.bathrooms}}</p>
+        
+        {% endif %}
+        <p>Property size: {{x.sqft}} ft²</p>
+<div class="status">
+    <p>For : {{x.types}}</p>
+</div>
+
+    </div>
+    <div class="description">
+        <p>{{x.description }}</p>
+    </div>
+
+</div>
+</div>
+
+{% endfor %}
+
+{% endblock start %}

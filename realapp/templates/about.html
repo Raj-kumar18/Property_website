@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+{% block start %}
+
+<div class="aboutPage">
+    <h1 class="propertyHeading">About Us</h1>
+
+    <!-- <div class="aboutsUs">
+        <div class="about_img">
+            <img src="{% static 'images/owner.jpg' %}" alt="">
+        </div>
+        <div class="about_con">
+            <h1>Property<span class="second">9to9</span></h1>
+
+            <p>A company called We Property99.in is situated in Guwahati. So, the display of diverse real estate properties throughout Assam and other North Eastern States is our top priority. Every property, even those in the most isolated locations, will be listed. Our goal is to inform users about real estate properties spread across a large area. We provide nearly free listing for property owners. If you need more time for your listing, we will give it to you for a small fee. You pay after publication for the majority of our services.</p>
+        </div>
+
+    </div> -->
+    <section class="about">
+
+        <div class="row">
+           <div class="image">
+              <img src="{% static 'images/about-img.svg' %}" alt="">
+           </div>
+           <div class="content">
+              <h3>why choose us?</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem provident voluptatum distinctio laborum veritatis vitae suscipit praesentium fugiat unde?</p>
+              <a href="contact.html" class="inline-btn">contact us</a>
+           </div>
+        </div>
+     
+     </section>
+
+
+     <section class="steps">
+
+        <h1 class="heading">3 simple steps</h1>
+     
+        <div class="box-container">
+     
+           <div class="box">
+              <img src="{% static 'images/step-1.png' %}" alt="">
+              <h3>search property</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+           </div>
+     
+           <div class="box">
+              <img src="{% static 'images/step-2.png' %}" alt="">
+              <h3>contact agents</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+           </div>
+     
+           <div class="box">
+              <img src="{% static 'images/step-3.png' %}" alt="">
+              <h3>enjoy property</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+           </div>
+     
+        </div>
+     
+     </section>
+
+</div>
+
+
+
+
+{% endblock start %}

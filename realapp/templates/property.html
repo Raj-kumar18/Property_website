@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block title %}Property{% endblock title %}
+{% block start %}
+<div class="propertyPage">
+    <h1 class="propertyHeading">Top Property</h1>
+    <div class="property_cont">
+{% for x in property %}
+
+      <div class="property-card ">
+        <img src="{{x.photo.url}}" alt="Property Image">
+          <div class="property-card-content">
+            <div class="pt">
+              <h2 class="property-title">{{x.title}}  </h2>
+
+            <div class="type">
+              <h4>For {{x.types}}</h4>
+            </div>
+            </div>
+            <div class="third">{{x.created_at}}</div>
+              <p class="property-description">{{x.description|slice:":100" }}..</p>
+              <p class="property-price">₹{{x.price}}</p>
+              <div class="bbp">
+                {% if x.bedrooms == none %}
+
+                {% elif x.bathrooms == none %}
+
+                {% else %}
+                <p>Bedrooms:{{x.bedrooms}}</p>
+                <p>Bathrooms:{{x.bathrooms}}</p>
+                
+                {% endif %}
+                <p>Property size: {{x.sqft}} ft²</p>
+              </div>
+              <a href="{{x.slug}}" class="p_detal">View Detail</a>
+          </div>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+{% endblock start %}
